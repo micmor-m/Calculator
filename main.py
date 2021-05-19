@@ -1,3 +1,6 @@
+from art import logo
+
+
 # Add
 def add(n1, n2):
     return n1 + n2
@@ -27,10 +30,11 @@ operations = {
 
 
 def calculator():
+    print(logo)
     running = "y"
     is_first_loop = True
     while running == "y":
-        num1 = int(input("What is the first number?: "))
+        num1 = float(input("What is the first number?: "))
         # Print list of operation to user:
         for operation in operations:
             print(operation)
@@ -38,7 +42,7 @@ def calculator():
         function = operations[operation_symbol]
 
         if is_first_loop:
-            num2 = int(input("What is the second number?: "))
+            num2 = float(input("What is the second number?: "))
         else:
             num2 = result
 
